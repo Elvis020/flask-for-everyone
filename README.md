@@ -38,9 +38,8 @@ This is a simple flask program built with the students of global code 2024 in Le
   * Windows: python3 create_db.py; flask run
   * Linux/Mac: python create_db.py && flask run
   * If you can see the image below, congrats you are now ready to contribute.😊
-   <br>
+   
    ![Success✅](https://github.com/Elvis020/flask-for-everyone/blob/main/code_run_success.png?raw=true)
-   <br>
   * Next, create a branch with your name and then you can start contributing.
   * After contributing please make sure to add your name to the [features](https://github.com/Elvis020/flask-for-everyone#features) section.
 
