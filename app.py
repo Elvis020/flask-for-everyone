@@ -59,3 +59,41 @@ def delete_student(name):
     db.session.add_all(remaining_students)
     db.session.commit()
     return render_template('students.html',students=remaining_students)
+
+
+
+
+
+
+# TODO for Joshua: Write a function to get_all_students under 18
+# Write your function here
+
+
+
+# TODO for Albert: Write a function to add a student using a form
+# Write your function here
+
+
+# TODO for Nicole: Write a function to get_all_students above 18
+# Write your function here
+
+
+# TODO for Pokuaa: Write a function to get_all_students above 18 but less than 30
+# Write your function here
+
+
+# TODO for Jalilu: Write a function to get_all_female_students
+# Write your function here
+
+
+# TODO for David: Write a function to get_all_male_students
+# Write your function here
+
+
+# TODO for Herbert: Write a function to get_all_male_students above 18
+# Write your function here
+
+
+
+# TODO for Edem: Write a function to get_all_female_students under 18
+# Write your function here
