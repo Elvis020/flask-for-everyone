@@ -76,7 +76,10 @@ def delete_student(name):
 @app.route("/students/add", methods=['GET','POST'])
 def add_student():
     f = request.form
-    db.session.add(Student(f['name'],int(f['age']), f['gender']))
+    name = f['name']
+    age = int(f['age'])
+    gender = ['','Male','Female',][int(f['gender'])]
+    db.session.add(Student(name,age, gender))
     print(f"Adding {f['name']} Age: {f['age']}  Gender: {f['gender']}")
     students = Student.query.all()
     db.session.commit()
