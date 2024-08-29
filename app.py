@@ -97,13 +97,17 @@ def std_abv_18():
     return render_template('students.html',students=abv_18)
 
 
-# TODO for Pokuaa: Write a function to get_all_students above 18 but less than 30
+# TODO for Pokua: Write a function to get_all_students above 18 but less than 30
 # Write your function here
-
+@app.route("/students/age-btn-18-n-30")
+def less_than_30():
+    other_students= Student.query.filter(Student.age  >18).filter(Student.age<30).all()
+    return render_template("students.html", students=other_students) 
 
 # TODO for Jalilu: Write a function to get_all_female_students
 # Write your function here
 
+     
 
 # TODO for David: Write a function to get_all_male_students
 # Write your function here
