@@ -27,7 +27,12 @@ This is a simple flask program built with the students of global code 2024 in Le
 
 ## Features
 - [x] Elvis😎 has added his part.
-- [x] KWABENA has added his part. 
+- [x] Edem was here some
+- [x] Herbert added his part 
+- [x] Pokua has added her part
+- [x] Joshua has added his part. 
+- [x] Albert has added his part.
+- [x] Nicole😎 has added her part.
 
 
 ## Contributing_Guidelines
