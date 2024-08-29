@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import os
  
@@ -72,6 +72,15 @@ def delete_student(name):
 
 # TODO for Albert: Write a function to add a student using a form
 # Write your function here
+
+@app.route("/students/add", methods=['GET','POST'])
+def add_student():
+    f = request.form
+    db.session.add(Student(f['name'],int(f['age']), f['gender']))
+    print(f"Adding {f['name']} Age: {f['age']}  Gender: {f['gender']}")
+    students = Student.query.all()
+    db.session.commit()
+    return render_template('students.html',students= students)
 
 
 # TODO for Nicole: Write a function to get_all_students above 18
