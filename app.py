@@ -123,8 +123,10 @@ def get_all_male_students_above_18():
 
 
 # TODO for Edem: Write a function to get_all_female_students under 18
-# Write your function here
-
+@app.route("/students/female18")
+def female_student_under_18():
+    students = Student.query.filter(Student.age < 18 ).filter(Student.gender =="female").all()
+    return render_template('students.html', students = students)
 
 
 # TODO for Kwabena: Write a function to only a particular student, where the function accepts a name of the student. 
