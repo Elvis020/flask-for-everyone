@@ -128,4 +128,12 @@ def get_all_male_students_above_18():
 
 
 # TODO for Kwabena: Write a function to only a particular student, where the function accepts a name of the student. 
-# Write your function here
+@app.route("/students/<string:name>")
+def get_student_by_name(name):
+    student = Student.query.filter_by(name=name).first()
+    if student:
+        return render_template('student_detail.html', student=student)
+    else:
+        return f"No student found with the name {name}", 404
+    
+
