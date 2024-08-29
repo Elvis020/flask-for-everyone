@@ -12,9 +12,9 @@ Flask with everyone
 </h3>
 
 ## Installation
-To install the flask-for-everyone<br>
-* ```git clone https://github.com/Elvis020/flask-for-everyone.git```
-* ```cd flask-for-everyone/```
+For contributors: To install the flask-for-everyone<br>
+* First fork the repo and then clone the forked repo.
+* ```cd <forked-repo>/```
 * ```pip install -r requirements```
 
 ## Overview
