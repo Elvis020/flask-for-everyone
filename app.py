@@ -88,6 +88,10 @@ def add_student():
 
 # TODO for Nicole: Write a function to get_all_students above 18
 # Write your function here
+@app.route("/students/age-greater-than-18")
+def std_abv_18():
+    abv_18= Student.query.filter(Student.age>=18).all()
+    return render_template('students.html',students=abv_18)
 
 
 # TODO for Pokuaa: Write a function to get_all_students above 18 but less than 30
