@@ -17,3 +17,9 @@ with app.app_context():
                         jalilu,pokuaa,
                         nicole])
     db.session.commit()
+
+
+with app.app_context():
+    female_students = Student.query.filter(Student.gender == 'female').all()
+    for student in female_students:
+        print(f"ID: {student.id}, Name: {student.name}, Age: {student.age}, Gender: {student.gender}")
