@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Students | Home</title>
+  </head>
+  <body>
+    <h2 class="container d-flex p-5 items-center justify-content-center">
+      A page for displaying a list of students
+    </h2>
+
+    <table class="table table-striped container">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Actions</th>
+      </tr>
+      {% for student in students %}
+      <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        {% if student.gender == 'male' %}
+        <td>🙍🏼‍♂️</td>
+        {% else %}
+        <td>🙎🏼‍♀️</td>
+        {% endif%}
+        <td class="d-flex p-2 gap-3">
+          <a href="/students/{{student.name}}" class="btn btn-danger">Delete</a>
+          <a href="/students/{{student.name}}" class="btn btn-warning"
+            >Update</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <div class="container d-flex gap-3">
+      <span class="d-flex justify-content-center align-items-center gap-3 border border-danger w-75 p-4 ">
+        <span class="d-flex flex-column input-group-sm">
+          <label class="w-3" for="name">Name</label>
+          <input class="form-control shadow-none" type="text" />
+        </span>
+        <span class="d-flex flex-column input-group-sm ">
+          <label for="name">Age</label>
+          <input class="form-control shadow-none" type="text" />
+        </span>
+        <select class="form-select shadow-none w-25 mt-20 border border-danger" aria-label="Default select example">
+          <option selected>Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+        <span class="">
+          <button class="btn btn-success">Add</button>
+        </span>
+        <span>
+      </span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  </body>
+</html>
