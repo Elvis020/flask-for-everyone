@@ -107,6 +107,12 @@ def less_than_30():
 # TODO for Jalilu: Write a function to get_all_female_students
 # Write your function here
 
+@app.route("/students/female") 
+def get_all_female_students():
+    female_students = Student.query.filter(Student.gender == 'female').all()
+    return render_template('students.html', students=female_students)
+
+
      
 
 # TODO for David: Write a function to get_all_male_students
