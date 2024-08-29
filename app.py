@@ -97,3 +97,8 @@ def delete_student(name):
 
 # TODO for Edem: Write a function to get_all_female_students under 18
 # Write your function here
+
+
+
+# TODO for Kwabena: Write a function to only a particular student, where the function accepts a name of the student. 
+# Write your function here
