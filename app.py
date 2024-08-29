@@ -92,6 +92,10 @@ def delete_student(name):
 
 # TODO for Herbert: Write a function to get_all_male_students above 18
 # Write your function here
+@app.route("/students/male_above_18")
+def get_all_male_students_above_18():
+    male_students_above_18 = Student.query.filter(Student.gender == 'male', Student.age > 18).all()
+    return render_template('students.html', students=male_students_above_18)
 
 
 
