@@ -7,7 +7,7 @@ Flask with everyone
 
 <h3 align="center">
 
-[Installation](https://github.com/Elvis020/flask-for-everyone#installation) - [Overview](https://github.com/Elvis020/flask-for-everyone#overview) - [Features](https://github.com/Elvis020/flask-for-everyone#features) - [Contributing Guidelines](https://github.com/Elvis020/flask-for-everyone#Contributing_Guidelines) - [Libraries](https://github.com/Elvis020/flask-for-everyone#libraries)
+[Installation](https://github.com/Elvis020/flask-for-everyone#installation) - [Overview](https://github.com/Elvis020/flask-for-everyone#overview) - [Libraries](https://github.com/Elvis020/flask-for-everyone#libraries) - [Features](https://github.com/Elvis020/flask-for-everyone#features) - [Contributing Guidelines](https://github.com/Elvis020/flask-for-everyone#Contributing_Guidelines)
 
 </h3>
 
