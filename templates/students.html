@@ -37,30 +37,33 @@
       </tr>
       {% endfor %}
     </table>
-
+    
+    <form method='POST' action="/students/add">
     <div class="container d-flex gap-3">
       <span class="d-flex justify-content-center align-items-center gap-3 w-75 p-4 ">
         <span class="d-flex flex-column input-group-sm">
           <label class="w-3" for="name">Name</label>
-          <input class="form-control shadow-none" type="text" />
+          <input class="form-control shadow-none" type="text" name="name"/>
         </span>
         <span class="d-flex flex-column input-group-sm ">
-          <label for="name">Age</label>
-          <input class="form-control shadow-none" type="text" />
+          <label for="age">Age</label>
+          <input class="form-control shadow-none" type="text" name="age"/>
         </span>
-        <select class="form-select shadow-none w-25 mt-20" aria-label="Default select example">
+        <select class="form-select shadow-none w-25 mt-20" aria-label="Default select example" name="gender">
           <option selected>Gender</option>
           <option value="1">Male</option>
           <option value="2">Female</option>
         </select>
         <span class="">
-          <button class="btn btn-success">Add</button>
+          <button type="submit" class="btn btn-success">Add</button>
         </span>
         <span>
       </span>
     </div>
+    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   </body>
 </html>
+

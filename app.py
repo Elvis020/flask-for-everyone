@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 import os
  
@@ -76,9 +76,25 @@ def stud_under_18():
 # TODO for Albert: Write a function to add a student using a form
 # Write your function here
 
+@app.route("/students/add", methods=['GET','POST'])
+def add_student():
+    f = request.form
+    name = f['name']
+    age = int(f['age'])
+    gender = ['','Male','Female',][int(f['gender'])]
+    db.session.add(Student(name,age, gender))
+    print(f"Adding {f['name']} Age: {f['age']}  Gender: {f['gender']}")
+    students = Student.query.all()
+    db.session.commit()
+    return render_template('students.html',students= students)
+
 
 # TODO for Nicole: Write a function to get_all_students above 18
 # Write your function here
+@app.route("/students/age-greater-than-18")
+def std_abv_18():
+    abv_18= Student.query.filter(Student.age>=18).all()
+    return render_template('students.html',students=abv_18)
 
 
 # TODO for Pokuaa: Write a function to get_all_students above 18 but less than 30
