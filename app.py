@@ -51,6 +51,7 @@ def get_all_students():
     students = Student.query.all()
     return render_template('students.html',students=students)
 
+
 @app.route("/students/<string:name>")
 def delete_student(name):
     Student.query.filter(Student.name == name).delete(synchronize_session=False)
@@ -83,11 +84,6 @@ def delete_student(name):
 
 # TODO for Jalilu: Write a function to get_all_female_students
 # Write your function here
-
-@app.route("/students/female") 
-def get_all_female_students():
-    female_students = Student.query.filter(Student.gender == 'female').all()
-    return render_template('students.html', students=female_students)
 
 
 # TODO for David: Write a function to get_all_male_students
