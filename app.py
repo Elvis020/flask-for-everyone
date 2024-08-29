@@ -67,7 +67,10 @@ def delete_student(name):
 
 # TODO for Joshua: Write a function to get_all_students under 18
 # Write your function here
-
+@app.route('/students/under_18')
+def stud_under_18():
+    remaining_students = Student.query.filter(Student.age < 18).all()
+    return render_template('students.html',students=remaining_students)
 
 
 # TODO for Albert: Write a function to add a student using a form
