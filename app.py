@@ -105,7 +105,7 @@ def delete_student(name):
 def get_student_by_name(name):
     student = Student.query.filter_by(name=name).first()
     if student:
-        return render_template('student_detail.html', student=student)
+        return render_template('student.html', student=student)
     else:
         return f"No student found with the name {name}", 404
     
